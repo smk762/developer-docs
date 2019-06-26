@@ -26,7 +26,7 @@ Each `coin` can be enabled only once, and in either Electrum or Native mode. The
 
 #### Notes on the mm2 Parameter
 
-For each `coin`, Komodo software requires the user/developer to set the `mm2` parameter. This can be achieved either in the [coins](../atomic-swap-dex/dex-walkthrough.md#setting-up-coin-list) for more details), or via the [electrum](../atomic-swap-dex/dex-api.html#electrum) and [enable](../atomic-swap-dex/dex-api.html#enable) methods.
+For each `coin`, Komodo software requires the user/developer to set the `mm2` parameter. This can be achieved either in the [coins](../atomic-swap-dex/dex-walkthrough.md#setting-up-coin-list) for more details), or via the [electrum](../atomicdex/atomicdex-api.md#electrum) and [enable](../atomicdex/atomicdex-api.md#enable) methods.
 
 The value of the `mm2` parameter informs the software as to whether the `coin` is expected to function.
 
@@ -138,7 +138,7 @@ ETH/ERC20 coins are also enabled by the `enable` method, but a local installatio
 
 Please refer to the `mm2` explanatory section in the `electrum` method for information about setting the `mm2` parameter and testing new coins.
 
-[Link to `mm2` explanatory section](../atomic-swap-dex/dex-api.html#notes-on-the-mm2-parameter)
+[Link to `mm2` explanatory section](../atomicdex/atomicdex-api.md#notes-on-the-mm2-parameter)
 
 For terminal interface examples using the `mm2` parameter with the `enable` method, see the examples section below.
 
@@ -360,7 +360,7 @@ The `buy` method issues a buy request and attempts to match an order from the or
 Buy and sell methods always create the `taker` order first. It means that you will require to pay additional 1/777 fee 
 of the trade amount during the swap for taking the liquidity from market. If your order is not matched in 30 seconds it's 
 automatically converted to maker and stays in orderbook until it's matched or cancelled. 
-To always act as maker please use [setprice method](../atomic-swap-dex/dex-api.html#setprice)
+To always act as maker please use [setprice method](../atomicdex/atomicdex-api.md#setprice)
 :::
 
 ### Arguments:
@@ -429,7 +429,7 @@ The `sell` method issues a sell request and attempts to match an order from the 
 Buy and sell methods always create the `taker` order first. It means that you will require to pay additional 1/777 fee 
 of the trade amount during the swap for taking the liquidity from market. If your order is not matched in 5 seconds it's 
 automatically converted to maker and stays in orderbook until it's matched or cancelled. 
-To always act as maker please use [setprice method](../atomic-swap-dex/dex-api.html#setprice)
+To always act as maker please use [setprice method](../atomicdex/atomicdex-api.md#setprice)
 :::
 
 ### Arguments:
@@ -633,7 +633,7 @@ The `help` method returns the full API documentation in the terminal.
 
 The `withdraw` method generates, signs, and returns a transaction that transfers the `amount` of `coin` to the address indicated in the `to` argument.  
 
-This method generates a raw transaction which should then be broadcast using [send_raw_transaction](../atomic-swap-dex/dex-api.html#send-raw-transaction).
+This method generates a raw transaction which should then be broadcast using [send_raw_transaction](../atomicdex/atomicdex-api.md#send-raw-transaction).
 
 ### Arguments:
 
